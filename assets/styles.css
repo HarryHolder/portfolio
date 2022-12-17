@@ -10,11 +10,16 @@
 :root {
   --grey: #d9d9d9;
   --pink: #f76f73;
+  --white: #faf6f6;
 }
+
+/* Element specific CSS */
 
 html {
   background-color: var(--grey);
   color: black;
+  scroll-padding-top: 153px;
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -41,17 +46,25 @@ nav > a:hover {
   color: var(--grey);
 }
 
-#header {
-  background-color: var(--grey);
-  position: fixed;
-  top: 0px;
-  height: 158px;
-  padding: 0px 20px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  border-bottom: 10px solid var(--pink);
-  z-index: 100;
+/* Class specific Css */
+
+.ex-link {
+  margin-left: 20px;
+}
+
+.sub-heading {
+  font-size: 1.3rem;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.sub-heading h2 {
+  font-weight: normal;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  border-right: 2.5px solid var(--pink);
+  padding-right: 20px;
 }
 
 .logo > img {
@@ -63,6 +76,40 @@ nav > a:hover {
   align-items: left;
   text-align: center;
   margin-left: 20px;
+}
+
+.work-title {
+  width: auto;
+  margin: auto;
+  position: absolute;
+  bottom: 30px;
+  background-color: var(--white);
+  padding: 5px;
+}
+
+.work-title h3 {
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+.work-subtitle {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+/* ID specific CSS */
+
+#header {
+  background-color: var(--grey);
+  position: fixed;
+  top: 0px;
+  height: 158px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 5px solid var(--white);
+  z-index: 100;
 }
 
 #container {
@@ -99,7 +146,6 @@ nav > a:hover {
 }
 
 #bio {
-  border: 2px solid black;
   margin-left: 20px;
   grid-area: bio;
 }
@@ -121,49 +167,58 @@ nav > a:hover {
 }
 
 #main-link {
-  border: 2px solid black;
+  border: 2.5px solid var(--white);
   margin-left: 20px;
   grid-area: main;
   margin-bottom: 10px;
+  position: relative;
+  background-image: url(/assets/images/kobe.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #link2 {
-  border: 2px solid black;
+  border: 2.5px solid var(--white);
   margin-left: 20px;
   grid-area: second;
+  position: relative;
+  background-image: url(/assets/images/trail.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #link3 {
-  border: 2px solid black;
+  border: 2.5px solid var(--white);
   margin-left: 20px;
   grid-area: third;
+  position: relative;
+  background-image: url(/assets/images/furniture\ store.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #contact {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100px;
-  grid-template-areas: "contact-sh email github linkd phone";
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 55.5px;
+  grid-template-areas: "contact-sh links";
   padding: 10px 20px;
+}
+
+#contact-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 55.5px;
+}
+
+#contact-links img {
+  max-height: 100%;
+  margin: auto;
 }
 
 #contact-sh {
   grid-area: contact-sh;
-}
-
-.ex-link {
-  border: 2px solid black;
-  margin-left: 20px;
-}
-
-.sub-heading {
-  border-right: 5px solid var(--pink);
-  font-size: 1.3rem;
-  text-align: right;
-  padding-right: 15px;
-}
-
-.sub-heading h2 {
-  font-weight: normal;
-  padding-top: 10px;
 }
