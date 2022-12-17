@@ -18,8 +18,12 @@
 html {
   background-color: var(--grey);
   color: black;
+<<<<<<< HEAD
   scroll-padding-top: 153px;
   scroll-behavior: smooth;
+=======
+/*   scroll-padding-top: 180px; */
+>>>>>>> 4915d1237528ca1faa66ead016c5963de70083b1
 }
 
 nav {
