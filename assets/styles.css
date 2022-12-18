@@ -170,7 +170,7 @@ nav > a:hover {
   grid-area: picture;
   border: 1px solid black;
   margin-left: 10px;
-  background-image: url(/assets/images/profile.jpg);
+  background-image: url(./images/profile.jpg);
   background-position: top;
   background-size: cover;
 }
