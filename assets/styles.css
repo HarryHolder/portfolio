@@ -159,7 +159,7 @@ nav > a:hover {
   grid-area: bio;
   display: grid;
   grid-template-columns: 1fr 1fr 200px;
-  grid-template-rows: 300px;
+  grid-template-rows: 1fr;
   grid-template-areas: "text text picture";
 }
 
@@ -167,12 +167,13 @@ nav > a:hover {
   grid-area: text;
   margin-right: 10px;
   display: inline-block;
-  overflow: auto;
   text-align: center;
+  overflow:auto;
 }
 
 #picture {
   grid-area: picture;
+  height: 200px;
   margin-left: 10px;
   background-image: url(./images/profile.jpeg);
   background-position: top;
