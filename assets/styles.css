@@ -102,6 +102,10 @@ nav > a:hover {
   height: 100%;
 }
 
+.media-heading {
+  display: none;
+}
+
 /* ID specific CSS */
 
 #header {
@@ -140,7 +144,7 @@ nav > a:hover {
 #about {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 200px;
+  grid-template-rows: 300px;
   grid-template-areas: "about-sh bio bio bio bio";
   padding: 10px 20px;
   margin-bottom: 20px;
@@ -155,20 +159,20 @@ nav > a:hover {
   grid-area: bio;
   display: grid;
   grid-template-columns: 1fr 1fr 200px;
-  grid-template-rows: 200px;
+  grid-template-rows: 300px;
   grid-template-areas: "text text picture";
-  border: 1px solid black;
 }
 
 #text {
   grid-area: text;
-  border: 1px solid black;
   margin-right: 10px;
+  display: inline-block;
+  overflow: auto;
+  text-align: center;
 }
 
 #picture {
   grid-area: picture;
-  border: 1px solid black;
   margin-left: 10px;
   background-image: url(./images/profile.jpeg);
   background-position: top;
@@ -238,4 +242,136 @@ nav > a:hover {
 
 #contact-sh {
   grid-area: contact-sh;
+}
+
+@media only screen and (max-width: 768px) {
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 200px;
+    grid-template-areas: " bio bio bio bio";
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
+
+  #about-sh {
+    display: none;
+  }
+
+  #about {
+    display: block;
+  }
+
+  #bio {
+    display: block;
+  }
+
+  #picture {
+    display: none;
+  }
+
+  #text {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+  }
+
+  #work {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-areas:
+      "main main main main"
+      "main main main main"
+      "second second third third";
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
+
+  #work-sh {
+    display: none;
+  }
+
+  #contact {
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-template-rows: 55.5px;
+    grid-template-areas: "links";
+    padding: 10px 20px;
+  }
+
+  #contact-sh {
+    display: none;
+  }
+
+  .media-heading {
+    display: block;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  #container {
+    margin-bottom: 20px;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #work {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 150px 200px 200px;
+    grid-template-areas:
+      "main main main main"
+      "main main main main"
+      "second second second second"
+      "third third third third";
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
+
+  #link2 {
+    margin-bottom: 10px;
+  }
+
+  #work-sh {
+    display: none;
+  }
+
+  #header {
+    background-color: var(--grey);
+    position: fixed;
+    top: 0px;
+    height: 158px;
+    padding: 0px 20px;
+    display: block;
+    width: 100%;
+    border-bottom: 5px solid var(--white);
+    z-index: 100;
+  }
+
+  .logo img {
+    margin-left: -30px;
+  }
+
+  #about {
+    display: block;
+  }
+
+  #bio {
+    display: block;
+  }
+
+  #picture {
+    display: none;
+  }
+
+  #text {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+  }
 }
