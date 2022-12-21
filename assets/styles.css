@@ -183,7 +183,7 @@ nav > a:hover {
 #work {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 200px 200px 200px;
+  grid-template-rows: 250px 250px 200px;
   grid-template-areas:
     "work-sh main main main main"
     "work-sh main main main main"
